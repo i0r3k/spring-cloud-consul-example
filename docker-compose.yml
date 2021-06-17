@@ -1,0 +1,41 @@
+version: '3.7'
+
+services:
+  consul-server:
+    image: consul:0.8.1
+    container_name: consul-server
+    restart: always
+    networks:
+      - consul
+    ports:
+      - "9500:9500"
+    command: "agent -server -bind=0.0.0.0 -client=0.0.0.0 -http-port=9500 -bootstrap-expect=1 -ui -disable-host-node-id -data-dir=/consul/data -log-level=DEBUG"
+
+
+  consul-agent:
+    image: consul:0.8.1
+    container_name: consul-agent
+    restart: always
+    ports:
+      - "9510:9510"
+    networks:
+      - consul
+    command: "agent -bind=0.0.0.0 -client=0.0.0.0 -http-port=9510 -disable-host-node-id -data-dir=/consul/data -log-level=DEBUG -retry-join 'consul-server'"
+
+
+  pipy-proxy:
+    image: flomesh/pipy-pjs:latest
+    container_name: pipy-proxy
+    restart: always
+    ports:
+      - "8500:8500"
+    volumes:
+      - ./pipy.js:/tmp/pipy.js:ro
+    networks:
+      - consul
+    command: "pipy /tmp/pipy.js"
+
+networks:
+  consul:
+    driver: bridge
+
