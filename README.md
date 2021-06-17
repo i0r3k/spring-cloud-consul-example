@@ -3,10 +3,9 @@
 ## 所需软件
 在运行前，确保机器上已经安装了以下软件：
 1. JDK 8
-2. Maven 3.5+
-3. Docker 19.03+
-4. Docker Compose，与Docker版本匹配即可
-5. ClickHouse，最新版即可
+2. Docker 19.03+
+3. Docker Compose，与Docker版本匹配即可
+4. ClickHouse，最新版即可
 
 ## 使用端口
 - consul server: 9500
@@ -73,7 +72,7 @@
 
 3. 运行service B，进入项目根目录下的service-b目录，执行：
 ```shell
-mvn spring-boot:run
+../mvnw spring-boot:run
 ```
 4. 测试service B是否已经运行成功：
 ```shell
@@ -88,7 +87,7 @@ Hello from service B, timestamp=1623906529019
 
 5. 运行service A，进入项目根目录下的service-a目录，执行：
 ```shell
-mvn spring-boot:run
+../mvnw spring-boot:run
 ```
 6. 测试service A是否已经运行成功：
 ```shell
