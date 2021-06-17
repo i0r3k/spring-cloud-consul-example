@@ -87,7 +87,7 @@
   Creating consul-agent  ... done
   Creating consul-server ... done
   ```
-2. 访问consul server的UI，如果能狗看到consul控制台，则已经启动成功：http://localhost:9500/ui/
+2. 访问consul server的UI，如果能看到consul控制台，则已经启动成功：http://localhost:9500/ui/
 
 ![Consul Console](docs/images/consul-console.jpg)
 
