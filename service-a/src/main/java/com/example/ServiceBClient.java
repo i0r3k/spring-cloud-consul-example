@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * @date 2021/6/17
  */
 @FeignClient(name = "consul-service-b")
-public interface ServiceB {
+public interface ServiceBClient {
 
     @RequestMapping("/hello")
     String hello();
