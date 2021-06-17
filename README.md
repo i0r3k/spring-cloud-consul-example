@@ -1,7 +1,7 @@
 # README
 
 ## 架构
-![Architecture](docs/images/consul-example-architecture.png)
+<img src="https://github.com/linyang0625/spring-cloud-consul-example/blob/main/docs/images/consul-example-architecture.png" width="480">
 
 ## 使用端口
 - consul server: **9500**(HTTP)
