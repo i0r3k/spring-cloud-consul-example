@@ -34,7 +34,7 @@ services:
       - ./pipy.js:/tmp/pipy.js:ro
     networks:
       - consul
-    command: "pipy /tmp/pipy.js"
+    command: "pipy /tmp/pipy.js --reuse-port --log-level=debug"
     depends_on:
       - consul-agent
 
