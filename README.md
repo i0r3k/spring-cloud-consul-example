@@ -61,12 +61,28 @@
   这样将会启动consul server，consul agent以及pipy proxy
   ```shell
   ▶ docker-compose up -d 
-  Docker Compose is now in the Docker CLI, try `docker compose up`
-
-  Creating network "test_consul" with driver "bridge"
-  Creating consul-server ... done
+  
+  Creating network "spring-cloud-consul-example_consul" with driver "bridge"
+  Pulling consul-server (consul:0.8.1)...
+  0.8.1: Pulling from library/consul
+  627beaf3eaaf: Pull complete
+  b1461e4eec1f: Pull complete
+  7fe97068ac22: Pull complete
+  09dbe139e0eb: Pull complete
+  5a5b9959a08b: Pull complete
+  Digest: sha256:32802ff926356afe416c4e7955abbd485eca23cb858d0da4143667d3778e572b
+  Status: Downloaded newer image for consul:0.8.1
+  Pulling pipy-proxy (flomesh/pipy-pjs:latest)...
+  latest: Pulling from flomesh/pipy-pjs
+  801bfaa63ef2: Pull complete
+  5d66922b09d2: Pull complete
+  e75adc4b5092: Pull complete
+  638cb4637d93: Pull complete
+  Digest: sha256:5e14ae55bedd6acaaf599d0c880fde0ce3088f925518dd2b9d3959f1301adae3
+  Status: Downloaded newer image for flomesh/pipy-pjs:latest
   Creating pipy-proxy    ... done
   Creating consul-agent  ... done
+  Creating consul-server ... done
   ```
 2. 访问consul server的UI，如果能狗看到consul控制台，则已经启动成功：http://localhost:9500/ui/
 
