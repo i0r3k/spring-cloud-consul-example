@@ -1,11 +1,7 @@
 # README
 
-## 所需软件
-在运行前，确保机器上已经安装了以下软件：
-1. JDK 8
-2. Docker 19.03+
-3. Docker Compose，与Docker版本匹配即可
-4. ClickHouse，最新版即可
+## 架构
+![Architecture](docs/images/consul-example.png)
 
 ## 使用端口
 - consul server: **9500**(HTTP)
@@ -13,6 +9,13 @@
 - pipy proxy: **8500**(HTTP)
 - service A: **8080**(HTTP)
 - service B: **8090**(HTTP)
+ 
+## 所需软件
+在运行前，确保机器上已经安装了以下软件：
+1. JDK 8
+2. Docker 19.03+
+3. Docker Compose，与Docker版本匹配即可
+4. ClickHouse，最新版即可
 
 ## 前置步骤
 1. 在ClickHouse的default schema中，使用下面的语句创建日志表：
