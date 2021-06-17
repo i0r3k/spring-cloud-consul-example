@@ -1,7 +1,7 @@
 # README
 
 ## 架构
-![Architecture](docs/images/consul-example.png)
+![Architecture](docs/images/consul-example-architecture.png)
 
 ## 使用端口
 - consul server: **9500**(HTTP)
