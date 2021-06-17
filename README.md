@@ -86,6 +86,8 @@
   ```
 2. 访问consul server的UI，如果能狗看到consul控制台，则已经启动成功：http://localhost:9500/ui/
 
+[Consul Console](docs/images/consul-console.jpg)
+
 3. 运行service B，进入项目根目录下的service-b目录，执行：
 ```shell
 ../mvnw spring-boot:run
